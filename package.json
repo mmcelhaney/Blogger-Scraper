@@ -2,7 +2,7 @@
   "name": "blogger-scraper",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mmcelhaney.github.io/blogger-scraper",
+  "homepage": ".",
   "dependencies": {
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",

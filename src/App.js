@@ -50,8 +50,11 @@ const BloggerScraper = () => {
     while (hasMore && !signal.aborted) {
       const url = `${baseRssUrl}?start-index=${startIndex}&max-results=${maxResults}&alt=json`;
       
+      // Use CORS proxy
+      const proxyUrl = `https://corsproxy.io/?${encodeURIComponent(url)}`;
+      
       try {
-        const response = await fetch(url, { signal });
+        const response = await fetch(proxyUrl, { signal });
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
         const data = await response.json();
